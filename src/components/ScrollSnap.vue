@@ -1,5 +1,6 @@
 <template lang="pug">
-  div
+  div(class="scroll-snap-container")
+    slot
 </template>
 
 <script lang="ts">
@@ -15,5 +16,8 @@ export default class ScrollSnap extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  .scroll-snap-container{
+    scroll-snap-type: y mandatory;
+  }
 
 </style>

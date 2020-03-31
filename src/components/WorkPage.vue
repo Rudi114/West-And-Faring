@@ -1,11 +1,17 @@
 <template lang="pug">
   div
-    img(src="../images/work/wp_winslet.png" class="wp-winslet portfolio-piece")
-    img(src="../images/work/wp_asu.png" class="wp-asu portfolio-piece")
-    img(src="../images/work/wp_db.png" class="wp-db portfolio-piece")
-    img(src="../images/work/wp_gaia.png" class="wp-gaia portfolio-piece")
-    img(src="../images/work/wp_quiksilver.png" class="wp-quiksilver portfolio-piece")
-    img(src="../images/work/wp_logo_book.png" class="wp-logo-book portfolio-piece")
+    a(v-bind:href="'https://www.behance.net/gallery/83719161/Winslet-Vineyards'")
+      img(src="../images/work/wp_winslet.png" class="wp-winslet portfolio-piece")
+    a(v-bind:href="''")
+      img(src="../images/work/wp_asu.png" class="wp-asu portfolio-piece")
+    a(v-bind:href="'https://www.behance.net/gallery/90076107/Social-Packages'")
+      img(src="../images/work/wp_db.png" class="wp-db portfolio-piece")
+    a(v-bind:href="''")
+      img(src="../images/work/wp_gaia.png" class="wp-gaia portfolio-piece")
+    a(v-bind:href="''")
+      img(src="../images/work/wp_quiksilver.png" class="wp-quiksilver portfolio-piece")
+    a(v-bind:href="'https://www.behance.net/gallery/82852769/Logo-Book-1'")
+      img(src="../images/work/wp_logo_book.png" class="wp-logo-book portfolio-piece")
 </template>
 
 <script lang="ts">

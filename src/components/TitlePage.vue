@@ -1,6 +1,5 @@
 <template lang="pug">
   div
-    img(src="../images/title/tp_logo.png" class="tp_logo")
     img(src="../images/title/tp_burger.png" class="tp_burger" :style="{opacity: this.opacity}")
 </template>
 

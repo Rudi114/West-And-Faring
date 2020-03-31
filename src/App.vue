@@ -1,17 +1,16 @@
 <template lang="pug">
   v-app(class="scroll-snap")
     ScrollDots(:scrollHeight="scrollHeight")
-    //- vue-scroll-snap(:fullscreen="true")
-    TitlePage(class="item" :scrollHeight="scrollHeight")
-    StickyNotePage(class="item" :scrollHeight="scrollHeight")
-    WorkPage(class="item")
-    AboutPage(class="item")
-    ContactPage(class="item")
+    div(class="snap")
+      TitlePage(class="item" :scrollHeight="scrollHeight")
+      StickyNotePage(class="item" :scrollHeight="scrollHeight")
+      WorkPage(class="item")
+      AboutPage(class="item")
+      ContactPage(class="item")
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import VueScrollSnap from "vue-scroll-snap";
 
 import ScrollDots from '@/components/ScrollDots.vue';
 import TitlePage from '@/components/TitlePage.vue';
@@ -30,7 +29,6 @@ import ScrollSnap from '@/components/ScrollSnap.vue';
     WorkPage,
     AboutPage,
     ContactPage,
-    VueScrollSnap,
     ScrollSnap
   },
 })
@@ -60,5 +58,11 @@ export default class App extends Vue {
   }
   body{
     overflow-y: hidden;
+  }
+  .snap{
+    scroll-snap-type: y mandatory;
+  }
+  .item{
+    scroll-snap-align: start;
   }
 </style>
