@@ -1,7 +1,7 @@
 <template lang="pug">
   div()
-    p
-    | Contact
+    img(src="../images/contact/cp_shadow.png" class="cp_shadow")
+    img(src="../images/contact/cp_temp.png" class="cp_temp")
 </template>
 
 <script lang="ts">
@@ -21,5 +21,18 @@ export default class ContactPage extends Vue {
   div{
     background: #262B30;
     height: 100vh;
+  }
+  .cp_shadow{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+  }
+  .cp_temp{
+    position: relative;
+    width: 80vw;
+    height: auto;
+    bottom: 92vh;
+    left: 9vw;
   }
 </style>
