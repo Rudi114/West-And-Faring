@@ -48,7 +48,7 @@ export default class ScrollDots extends Vue {
 <style lang="scss" scoped>
   .empty_dots{
     position: fixed;
-    width: 0.73vw;
+    width: 8px;
     height: auto;
     right: 6vw;
     mix-blend-mode: inherit;
@@ -95,7 +95,7 @@ export default class ScrollDots extends Vue {
 
   .dots {
     position: fixed;
-    width: 0.73vw;
+    width: 8px;
     height: auto;
     right: 6vw;
     opacity: 1;

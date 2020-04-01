@@ -30,7 +30,7 @@ export default class ContactPage extends Vue {
   }
   .cp_temp{
     position: relative;
-    width: 80vw;
+    width: 800px;
     height: auto;
     bottom: 92vh;
     left: 9vw;
