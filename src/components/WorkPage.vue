@@ -1,7 +1,7 @@
 <template lang="pug">
   div
-    //- a(v-bind:href="'https://www.behance.net/gallery/83719161/Winslet-Vineyards'")
-      img(src="../images/work/wp_winslet.png" class="wp-winslet portfolio-piece")
+    a(v-bind:href="'https://www.behance.net/gallery/83719161/Winslet-Vineyards'")
+      img(src="../images/work/wp_winslet1.png" class="wp-winslet portfolio-piece")
     a(v-bind:href="''")
       img(src="../images/work/wp_asu.png" class="wp-asu portfolio-piece")
     a(v-bind:href="'https://www.behance.net/gallery/90076107/Social-Packages'")

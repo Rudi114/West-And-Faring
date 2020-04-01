@@ -1,9 +1,9 @@
 <template lang="pug">
   div
     div(class="flex-div")
-      img(src="../images/about/ap_love.png" class="ap_love")
-      img(src="../images/about/ap_curiosity.png" class="ap_curiosity")
-      img(src="../images/about/ap_creative_communication.png" class="ap_creative_communication")
+      //- img(src="../images/about/ap_love.png" class="ap_love")
+      //- img(src="../images/about/ap_curiosity.png" class="ap_curiosity")
+      //- img(src="../images/about/ap_creative_communication.png" class="ap_creative_communication")
       //- img(src="../images/about/ap_innovation.png" class="ap_innovation")
       img(src="../images/about/ap_join.png" class="ap_join")
       img(src="../images/about/ap_plus.png" class="plus1")
@@ -11,12 +11,20 @@
       img(src="../images/about/ap_plus.png" class="plus3")
       img(src="../images/about/ap_plus.png" class="plus4")
       img(src="../images/about/ap_shadow.png" class="ap_shadow")
+      h3(class="ap_creative_communication")
+        | Creative Communication
       p(class="ap_creative_p")
         | At West&Faring, we believe in breaking the mold and finding new ways to reach those who suppory your business
+      h3(class="ap_curiosity")
+        | Curriosity
       p(class="ap_curiosity_p font")
         | Curiosity has driven human discovery for thousands of years. Why should that stop today? We believe that by facilitating that curiosity, we can discover amazing things
+      h3(class="ap_innovation")
+        | Innovation
       p(class="ap_innovation_p font")
         | What keeps us ahead of our competitors is the fact that we dont get complacent. We constantly strive for innovative new ways to do what we do best
+      h3(class="ap_love")
+        | Love
       p(class="ap_love_p font")
         | What makes mom's cooking so good? That same special ingrediant can be found from every logo to website that West&Faring creates
      
@@ -86,6 +94,10 @@ export default class AboutPage extends Vue {
     top: 350vh;
     width: 14vw;
     height: auto;
+  }
+
+  h3{
+    color: #FFFFE7;
   }
 
   p{
