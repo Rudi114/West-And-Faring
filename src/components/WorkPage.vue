@@ -29,7 +29,6 @@ export default class WorkPage extends Vue {
 
 <style lang="scss" scoped>
   div{
-    scroll-snap-align: start;
     background: #FFFEF4;
     height: 100vh;
   }

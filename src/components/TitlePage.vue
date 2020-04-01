@@ -25,7 +25,6 @@ export default class TitlePage extends Vue {
 
 <style lang="scss" scoped>
   div{
-    scroll-snap-align: start;
     background-image: url('../images/title/tp_title.png');
     background-size: cover;
     background-attachment: fixed;

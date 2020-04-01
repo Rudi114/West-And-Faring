@@ -38,7 +38,6 @@ export default class AboutPage extends Vue {
 
 <style lang="scss" scoped>
   div{
-    scroll-snap-align: start;
     background: #4C64FF;
     height: 100vh;
   }
