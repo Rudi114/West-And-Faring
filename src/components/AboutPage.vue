@@ -4,7 +4,7 @@
       img(src="../images/about/ap_love.png" class="ap_love")
       img(src="../images/about/ap_curiosity.png" class="ap_curiosity")
       img(src="../images/about/ap_creative_communication.png" class="ap_creative_communication")
-      //- img(src="../images/about/ap_innovation.png" class="ap_innovation")
+      img(src="../images/about/ap_innovation.png" class="ap_innovation")
       img(src="../images/about/ap_join.png" class="ap_join")
       img(src="../images/about/ap_plus.png" class="plus1")
       img(src="../images/about/ap_plus.png" class="plus2")

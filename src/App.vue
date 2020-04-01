@@ -34,12 +34,19 @@ export default class App extends Vue {
   private scrollHeight: number = 0;
 
   public async mounted() {
-		this.getScrollHeight();
-    document.getElementById("scroll").addEventListener('scroll', this.getScrollHeight);
+    this.getScrollHeight();
+    var element = document.getElementById("scroll")
+    if (element !== null) {
+      element.addEventListener('scroll', this.getScrollHeight);
+    }
   }
 
   private getScrollHeight() {
-    this.scrollHeight = document.getElementById("scroll").scrollTop / window.innerHeight;
+    var element = document.getElementById("scroll")
+    if (element !== null) {
+      this.scrollHeight = element.scrollTop / window.innerHeight;
+    }
+    
   }
 }
 </script>
