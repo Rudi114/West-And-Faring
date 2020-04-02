@@ -32,8 +32,8 @@ export default class TitlePage extends Vue {
   }
   .tp_burger{
     position: relative;
-    width: 3vw;
-    height: 0.5cm;
+    width: 1cm;
+    height: 0.4cm;
     display: block;
     margin-left: auto;
     margin-right: auto;

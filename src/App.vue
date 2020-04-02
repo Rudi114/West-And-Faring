@@ -2,11 +2,11 @@
   v-app
     div(class="scroll-snap-container" id="scroll")
       ScrollDots(:scrollHeight="scrollHeight")
-      TitlePage(class="scroll-item" :scrollHeight="scrollHeight")
-      StickyNotePage(class="scroll-item" :scrollHeight="scrollHeight")
-      WorkPage(class="scroll-item")
-      AboutPage(class="scroll-item")
-      ContactPage(class="scroll-item")
+      TitlePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
+      StickyNotePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
+      WorkPage(class="scroll-item not-about")
+      AboutPage(class="scroll-item about")
+      ContactPage(class="scroll-item not-about")
 </template>
 
 <script lang="ts">
@@ -75,7 +75,13 @@ export default class App extends Vue {
   .scroll-item {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    min-height: 100%;
     flex: 1;
+  }
+  .about{
+    height: 300vh;
+  }
+
+  .not-about{
+    min-height: 100%;
   }
 </style>

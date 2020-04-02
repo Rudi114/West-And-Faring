@@ -12,7 +12,8 @@
     img(src="../images/scroll_dots/dot.png" class="wp-dot dots" :style="{opacity: this.opacityDot2}")
     img(src="../images/scroll_dots/dot.png" class="ap-dot dots" :style="{opacity: this.opacityDot3}")
     img(src="../images/scroll_dots/dot.png" class="cp-dot dots" :style="{opacity: this.opacityDot4}")
-    img(src="../images/scroll_dots/side_logo.png" class="side-logo" :style="{opacity: this.opacityLogo}")
+    div(class="logo-container")
+      img(src="../images/scroll_dots/side_logo.png" class="side-logo" :style="{opacity: this.opacityLogo}")
 </template>
 
 <script lang="ts">
@@ -46,6 +47,15 @@ export default class ScrollDots extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  .logo-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "."
+      "middle"
+      ".";
+  }
   .empty_dots{
     position: fixed;
     width: 8px;
@@ -123,5 +133,9 @@ export default class ScrollDots extends Vue {
     width: 0.5cm;
     left: 4vw;
     mix-blend-mode: inherit;
+    grid-area: middle;
   }
+  // * {
+  //   outline: 1px solid red;
+  // }
 </style>
