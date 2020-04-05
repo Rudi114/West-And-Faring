@@ -5,9 +5,11 @@
         | About
       h2(class="header-text color")
         | West&Faring is a community of designers, entrepeneurs, and developers aimed at transforming brands, solving problems, and improving people's lives
-      img(src="../images/about/ap_burger.png" class="burger")
       img(src="../images/about/ap_shadow.png" class="shadow")
-      div(class="grid-continer")
+      img(src="../images/about/ap_burger.png" class="burger")
+      p(class="believe")
+        | What we believe
+      div(class="grid-container")
         img(src="../images/about/ap_plus.png" class="plus1")
         h3(class="creative-communication color")
           | Creative Communication
@@ -69,6 +71,13 @@ export default class AboutPage extends Vue {
     width: 140vh;
   }
 
+  .shadow{
+    position: absolute;
+    width: 30vw;
+    right: 0vw;
+    top: 300vh;
+  }
+
   .burger{
     position: relative;
     width: 1cm;
@@ -79,15 +88,34 @@ export default class AboutPage extends Vue {
     top: 90vh;
   }
 
-  .shadow{
-    position: absolute;
-    width: 30vw;
-    right: 0vw;
-    top: 300vh;
+  .believe{
+    position: relative;
+    top: 100vh;
+    left: 40vw;
+    font-size: 30px;
   }
 
   .grid-container{
+    position: relative;
+    top: 115vh;
+    left: 10vw;
+    height: 120vh;
+    width: 80vw;
     display: grid;
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr;
+    grid-template-areas: 
+      "one-top-left one-top-right"
+      "one-bottom one-bottom"
+      ". ."
+      "two-top-left two-top-right"
+      "two-bottom two-bottom"
+      ". ."
+      "three-top-left three-top-right"
+      "three-bottom three-bottom"
+      ". ."
+      "four-top-left four-top-right"
+      "four-bottom four-bottom";
   }
 
   h3{
@@ -95,33 +123,25 @@ export default class AboutPage extends Vue {
   }
 
   .creative-communication{
-    position: absolute;
-    left: 9vw;
-    top: 403vh;
+    grid-area: one-top-left;
     height: 1cm;
     width: auto;
   }
 
   .curiosity{
-    position: absolute;
-    left: 9vw;
-    top: 440vh;
+    grid-area: two-top-left;
     height: 1cm;
     width: auto;
   }
 
   .innovation{
-    position: absolute;
-    left: 9vw;
-    top: 475vh;
+    grid-area: three-top-left;
     height: 1cm;
     width: auto;
   }
 
   .love{
-    position: absolute;
-    left: 9vw;
-    top: 512vh;
+    grid-area: four-top-left;
     height: 1cm;
     width: auto;
   }
@@ -131,73 +151,61 @@ export default class AboutPage extends Vue {
     font-family: hero-new, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .creative_p{
-    position: absolute;
-    left: 9vw;
-    top: 411vh;
+    grid-area: one-bottom;
     width: 60vw;
   }
 
   .curiosity_p{
-    position: absolute;
-    left: 9vw;
-    top: 448vh;
+    grid-area: two-bottom;
     width: 60vw;
   }
 
   .innovation_p{
-    position: absolute;
-    left: 9vw;
-    top: 483vh;
+    grid-area: three-bottom;
     width: 60vw;
   }
 
   .love_p{
-    position: absolute;
-    left: 9vw;
-    top: 520vh;
+    grid-area: four-bottom;
     width: 60vw;
   }
 
   .plus1{
-    position: absolute;
-    left: 43vw;
-    top: 409.6vh;
+    grid-area: one-top-right;
+    align-self: center;
     height: 0.5cm;
     width: auto;
   }
 
   .plus2{
-    position: absolute;
-    left: 43vw;
-    top: 431.6vh;
+    grid-area: two-top-right;
+    align-self: center;
     height: 0.5cm;
     width: auto;
   }
 
   .plus3{
-    position: absolute;
-    left: 43vw;
-    top: 453.6vh;
+    grid-area: three-top-right;
+    align-self: center;
     height: 0.5cm;
     width: auto;
   }
 
   .plus4{
-    position: absolute;
-    left: 43vw;
-    top: 475.6vh;
+    grid-area: four-top-right;
+    align-self: center;
     height: 0.5cm;
     width: auto;
   }
 
   .join{
-    position: absolute;
-    left: 43vw;
-    top: 550vh;
+    position: relative;
+    left: 33vw;
+    top: 140vh;
     width: 14vw;
     height: auto;
   }
