@@ -48,6 +48,16 @@ export default class AboutPage extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  @import url("https://use.typekit.net/zce0izl.css");
+
+  .join{
+    position: relative;
+    left: 33vw;
+    top: 140vh;
+    width: 14vw;
+    height: auto;
+  }
+
   .current-section{
     background: #4C64FF;
     height: 300vh;
@@ -118,8 +128,57 @@ export default class AboutPage extends Vue {
       "four-bottom four-bottom";
   }
 
+    @media only screen and (max-width: 1030px) {
+      .header-text{
+        font-size: 30px;
+      }
+      .grid-container{
+        height: 147vh;
+      }
+      .current-section{
+        height: 327vh;
+      }
+      .join{
+        top: 167vh;
+      }
+    }
+
+    @media only screen and (max-width: 930px) {
+      .header-text{
+        font-size: 25px;
+      }
+      .grid-container{
+        height: 174vh;
+      }
+      .current-section{
+        height: 354vh;
+      }
+      .join{
+        top: 194vh;
+      }
+    }
+
+    @media only screen and (max-width: 830px) {
+      .header-text{
+        font-size: 20px;
+      }
+      .grid-container{
+        height: 200vh;
+      }
+      .current-section{
+        height: 380vh;
+      }
+      .join{
+        top: 220vh;
+      }
+    }
+
+
   h3{
     font-size: 40px;
+    font-family: hero-new, sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 
   .creative-communication{
@@ -200,13 +259,5 @@ export default class AboutPage extends Vue {
     align-self: center;
     height: 0.5cm;
     width: auto;
-  }
-
-  .join{
-    position: relative;
-    left: 33vw;
-    top: 140vh;
-    width: 14vw;
-    height: auto;
   }
 </style>
