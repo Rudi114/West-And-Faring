@@ -1,7 +1,13 @@
 <template lang="pug">
   div()
     img(src="../images/contact/cp_shadow.png" class="cp_shadow")
-    img(src="../images/contact/cp_temp.png" class="cp_temp")
+    h3(class="contact-title")
+      | Contact
+    p(class="contact-about")
+      | email: westandfaring1@gmail.com
+      br
+      | phone: (925)451-4213
+    //- img(src="../images/contact/cp_temp.png" class="cp_temp")
 </template>
 
 <script lang="ts">
@@ -28,11 +34,26 @@ export default class ContactPage extends Vue {
     width: 100vw;
     top: 0vh;
   }
-  .cp_temp{
+  .contact-title{
     position: relative;
-    width: 800px;
+    font-size: 70px;
     height: auto;
-    bottom: 92vh;
-    left: 9vw;
+    bottom: 77vh;
+    left: 22vw;
+    color: white;
+    font-family: hero-new, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .contact-about{
+    position: relative;
+    height: auto;
+    bottom: 67vh;
+    left: 22vw;
+    color: white;
+    font-size: 30px;
+    font-family: hero-new, sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 </style>

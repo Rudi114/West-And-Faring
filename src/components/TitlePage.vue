@@ -1,6 +1,7 @@
 <template lang="pug">
-  div
-    img(src="../images/title/tp_burger.png" class="tp_burger" :style="{opacity: this.opacity}")
+  div(class="page")
+    div(class="logo")
+    img(src="../images/title/tp_burger.png" class="burger" :style="{opacity: this.opacity}")
 </template>
 
 <script lang="ts">
@@ -24,19 +25,44 @@ export default class TitlePage extends Vue {
 </script>
 
 <style lang="scss" scoped>
-  div{
-    background-image: url('../images/title/tp_title.png');
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+  // div{
+  //   background-color: #f75b43;
+  //   background-image: url('../images/title/tp_title.png');
+  //   background-size: 100vw;
+  //   background-attachment: fixed;
+  //   height: 100vh;
+  // }
+  // .tp_burger{
+  //   position: relative;
+  //   width: 1cm;
+  //   height: 0.4cm;
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   top: 90vh;
+  // }
+
+
+
+  .page{
+    background-color: #c94904;
   }
-  .tp_burger{
+  .burger{
     position: relative;
     width: 1cm;
     height: 0.4cm;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: 90vh;
+    bottom: 10vh;
+  }
+  .logo{
+
+    position: relative;
+    background-color: #c94904;
+    background-size: 100vw;
+    background-image: url('../images/title/tp_logo.png');
+    background-attachment: fixed;
+    height: 100vh;
   }
 </style>
