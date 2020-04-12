@@ -1,9 +1,7 @@
 <template lang="pug">
-  div
-    v-col(cols="6")
-      v-row
-        v-img(src="../images/sticky_note/sn_exist.png" class="sn_exist" :style="{left: this.existLeft}")
-        v-img(src="../images/sticky_note/sn_note.png" class="sn_note" :style="{right: this.noteRight}")
+  div(class="page")
+    v-img(src="../images/sticky_note/sn_exist.png" class="sn_exist" :style="{left: this.existLeft}")
+    v-img(src="../images/sticky_note/sn_note.png" class="sn_note" :style="{left: this.noteRight}")
 </template>
 
 <script lang="ts">
@@ -24,7 +22,7 @@ export default class StickyNotePage extends Vue {
   @Watch('scrollHeight')
   onScroll() {
     if(this.scrollHeight > 0.95) {
-      this.noteRight =  '34vw'
+      this.noteRight =  '4vw'
       this.existLeft = '43.5vw'
 
     }
@@ -33,19 +31,20 @@ export default class StickyNotePage extends Vue {
 </script>
 
 <style lang="scss" scoped>
-  div{
+  .page{
     background: #FFFEF4;
     height: 100vh;
   }
   .sn_note{
     background-color: transparent;
-    position: absolute;
-    top: 102.5vh;
+    position: relative;
     width: 65vw;
-    right: 16.5vw;
     height: auto;
-    z-index: 24;
+    z-index: 5;
     transition: all 0.7s;
+    left: 30vw;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .sn_exist{
     background-color: transparent;

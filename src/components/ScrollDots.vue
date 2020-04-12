@@ -47,15 +47,6 @@ export default class ScrollDots extends Vue {
 </script>
 
 <style lang="scss" scoped>
-  .logo-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-      "."
-      "middle"
-      ".";
-  }
   .empty_dots{
     position: fixed;
     width: 8px;
@@ -63,22 +54,25 @@ export default class ScrollDots extends Vue {
     right: 6vw;
     mix-blend-mode: inherit;
     z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .single-empty-dot-1{
-    top: 45.48vh;
+    // top: 45.48vh;
+    transform: translateY(-18px);
   }
 
   .single-empty-dot-2{
-    top: 48.29vh;
+    transform: translateY(-6px);
   }
 
   .single-empty-dot-3{
-    top: 51vh;
+    transform: translateY(6px);
   }
 
   .single-empty-dot-4{
-    top: 53.61vh;
+    transform: translateY(18px);
   }
 
   .invisible-dot1 {
@@ -110,30 +104,33 @@ export default class ScrollDots extends Vue {
     right: 6vw;
     opacity: 1;
     z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .sn-dot{
-    top: 45.48vh;
+    transform: translateY(-18px);
   }
   .wp-dot{
-    top: 48.29vh;
+    transform: translateY(-6px);
   }
 
   .ap-dot{
-    top: 51vh;
+    transform: translateY(6px);
   }
 
   .cp-dot{
-    top: 53.61vh;
+    transform: translateY(18px);
   }
   .side-logo{
     position: fixed;
-    top: 43vh;
+    // top: 43vh;
     height: 3cm;
     width: 0.5cm;
     left: 4vw;
     mix-blend-mode: inherit;
-    grid-area: middle;
+    top: 50%;
+    transform: translateY(-50%);
   }
   // * {
   //   outline: 1px solid red;

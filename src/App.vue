@@ -131,6 +131,7 @@ export default class App extends Vue {
     left: 0;
     opacity: 1;
     background-color: black;
+    z-index: 7;
   }
 
   .rotate-img{

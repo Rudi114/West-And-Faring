@@ -3,13 +3,13 @@
     div(class="grid-container")
       a(v-bind:href="'https://www.behance.net/gallery/83719161/Winslet-Vineyards'" class="wp-winslet portfolio-piece")
         img(src="../images/work/wp_winslet1.png" class="portfolio-piece")
-      a(v-bind:href="''" class="wp-asu portfolio-piece")
+      a(v-bind:href="'https://www.behance.net/gallery/94992987/ASU-Peer-to-Peer-Mentoring'" class="wp-asu portfolio-piece")
         img(src="../images/work/wp_asu.png" class="portfolio-piece")
       a(v-bind:href="'https://www.behance.net/gallery/90076107/Social-Packages'" class="wp-db portfolio-piece")
         img(src="../images/work/wp_db.png" class="portfolio-piece")
-      a(v-bind:href="''" class="wp-gaia portfolio-piece")
+      a(v-bind:href="'https://www.behance.net/gallery/94626873/Gaia-Protection'" class="wp-gaia portfolio-piece")
         img(src="../images/work/wp_gaia.png" class="portfolio-piece")
-      a(v-bind:href="''" class="wp-quiksilver portfolio-piece")
+      a(v-bind:href="'https://www.behance.net/gallery/94626579/Quiksilver-Rebrand'" class="wp-quiksilver portfolio-piece")
         img(src="../images/work/wp_quiksilver.png" class="portfolio-piece")
       a(v-bind:href="'https://www.behance.net/gallery/82852769/Logo-Book-1'" class="wp-logo-book portfolio-piece")
         img(src="../images/work/wp_logo_book.png" class="portfolio-piece")
@@ -35,7 +35,8 @@ export default class WorkPage extends Vue {
   }
   .grid-container{
     position: relative;
-    top: 15vh;
+    top: 50%;
+    transform: translateY(-50%);
     display: grid;
     grid-template-columns: 1fr 22vw 1fr 22vw 1fr;
     grid-template-rows: 1fr 13vh 1fr;

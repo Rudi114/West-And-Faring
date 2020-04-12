@@ -101,8 +101,8 @@ export default class AboutPage extends Vue {
   .believe{
     position: relative;
     top: 100vh;
-    left: 40vw;
     font-size: 30px;
+    text-align: center;
   }
 
   .grid-container{
