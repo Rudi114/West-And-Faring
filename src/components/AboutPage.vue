@@ -211,7 +211,7 @@ export default class AboutPage extends Vue {
     }
 
 
-    @media only screen and (max-width: 830px) and (max-height: 500px){
+    @media only screen and (max-width: 900px) and (max-height: 500px){
       .header-text{
         font-size: 21px;
       }
