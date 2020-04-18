@@ -15,7 +15,7 @@
     img(src="../images/scroll_dots/dot.png" class="sn-dot dots" :style="{opacity: this.opacityDot1}")
     img(src="../images/scroll_dots/dot.png" class="wp-dot dots" :style="{opacity: this.opacityDot2}")
     img(src="../images/scroll_dots/dot_white.png" class="ap-dot dots" :style="{opacity: this.opacityDot3}")
-    img(src="../images/scroll_dots/dot.png" class="cp-dot dots" :style="{opacity: this.opacityDot4}")
+    img(src="../images/scroll_dots/dot_white.png" class="cp-dot dots" :style="{opacity: this.opacityDot4}")
     img(src="../images/scroll_dots/side_logo.png" class="side-logo" :style="{opacity: this.opacityLogo}")
     img(src="../images/scroll_dots/side_logo_white.png" class="side-logo" :style="{opacity: this.opacityLogoWhite}")
 
@@ -32,6 +32,7 @@ import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 
 export default class ScrollDots extends Vue {
   @Prop() private scrollHeight!: number;
+  @Prop() private pageWidth!: number;
 
   private opacityDot1: number = 0;
   private opacityDot2: number = 0;
@@ -47,12 +48,18 @@ export default class ScrollDots extends Vue {
   onScroll() {
     this.scrollHeight > 0.5 && this.scrollHeight <= 1.5 ? this.opacityDot1 = 1 : this.opacityDot1 = 0;
     this.scrollHeight > 1.5 && this.scrollHeight <= 2.5 ? this.opacityDot2 = 1 : this.opacityDot2 = 0;
-    this.scrollHeight > 2.5 && this.scrollHeight <= 5.5 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
-    this.scrollHeight > 5.5 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
-    ((this.scrollHeight > 0.5)  && (this.scrollHeight < 2.5)) || this.scrollHeight > 5.7 ? this.opacityDot = 1 : this.opacityDot = 0;
-    (this.scrollHeight >= 2.5) && (this.scrollHeight <= 5.7) ? this.opacityDotWhite = 1 : this.opacityDotWhite = 0;
-    ((this.scrollHeight > 0.5)  && (this.scrollHeight < 2.5)) || this.scrollHeight > 5.7 ? this.opacityLogo = 1 : this.opacityLogo = 0;
-    (this.scrollHeight >= 2.5) && (this.scrollHeight <= 5.7) ? this.opacityLogoWhite = 1 : this.opacityLogoWhite = 0;
+    ((this.scrollHeight > 0.5) && (this.scrollHeight < 2.5)) ? this.opacityDot = 1 : this.opacityDot = 0;
+    this.scrollHeight >= 2.5 ? this.opacityDotWhite = 1 : this.opacityDotWhite = 0;
+    ((this.scrollHeight > 0.5) && (this.scrollHeight < 2.5)) ? this.opacityLogo = 1 : this.opacityLogo = 0;
+    this.scrollHeight >= 2.5 ? this.opacityLogoWhite = 1 : this.opacityLogoWhite = 0;
+
+    if(this.pageWidth > 930) {
+      this.scrollHeight > 2.5 && this.scrollHeight <= 5.7 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 5.7 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    } else if (this.pageWidth <= 930) {
+      this.scrollHeight > 2.5 && this.scrollHeight <= 5.9 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 5.9 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    }
   }
 }
 </script>

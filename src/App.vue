@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app
     div(class="scroll-snap-container" id="scroll" :class="{ scroll_mobile: mobile }")
-      ScrollDots(:scrollHeight="scrollHeight")
+      ScrollDots(:scrollHeight="scrollHeight" :pageWidth="pageWidth")
       TitlePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
       StickyNotePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
       WorkPage(class="scroll-item not-about")
@@ -125,13 +125,13 @@ export default class App extends Vue {
 
     @media only screen and (max-width: 830px) {
       .about{
-        height: 360vh;
+        height: 340vh;
       }
     }
 
     @media only screen and (max-width: 830px) and (max-height: 500px){
       .about{
-        height: 370
+        height: 370vh;
       }
     }
 

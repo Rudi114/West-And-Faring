@@ -56,4 +56,13 @@ export default class ContactPage extends Vue {
     font-weight: 300;
     font-style: normal;
   }
+
+  @media only screen and (max-width: 830px) {
+    .contact-title{
+      font-size: 50px;
+    }
+    .contact-about{
+      font-size: 21px;
+    }
+  }
 </style>
