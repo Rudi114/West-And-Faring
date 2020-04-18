@@ -1,6 +1,6 @@
 <template lang="pug">
   v-app
-    div(class="scroll-snap-container" id="scroll" v-bind:class="{ scroll_mobile: mobile }")
+    div(class="scroll-snap-container" id="scroll" :class="{ scroll_mobile: mobile }")
       ScrollDots(:scrollHeight="scrollHeight")
       TitlePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
       StickyNotePage(class="scroll-item not-about" :scrollHeight="scrollHeight")
@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue} from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 
 import ScrollDots from '@/components/ScrollDots.vue';
 import TitlePage from '@/components/TitlePage.vue';
@@ -36,6 +36,16 @@ export default class App extends Vue {
   private scrollHeight: number = 0;
   private pageWidth: number = 1152;
   private mobile: boolean = false;
+
+  @Watch('scrollHeight')
+  public setSnap(scrollHeight: number) {
+    var element = document.getElementById("scroll")
+    if ((element !== null) && (this.scrollHeight <= 3.5)) {
+      element.setAttribute("style", "scroll-snap-type: y mandatory")
+    } else if (element !== null) {
+      element.setAttribute("style", "scroll-snap-type: y proximity")
+    }
+  }
 
   public async mounted() {
     this.getScrollHeight();
