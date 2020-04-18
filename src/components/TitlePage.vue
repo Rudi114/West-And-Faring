@@ -46,6 +46,7 @@ export default class TitlePage extends Vue {
 
   .page{
     background-color: #E75D46;
+    overflow: hidden;
   }
   .burger{
     position: relative;
