@@ -85,7 +85,7 @@ export default class AboutPage extends Vue {
     font-size: 40px;
     left: 14vw;
     top: 326vh;
-    width: 130vh;
+    width: 65vw;
     font-family: hero-new, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -143,7 +143,7 @@ export default class AboutPage extends Vue {
 
     @media only screen and (max-width: 1030px) {
       .header-text{
-        font-size: 30px;
+        font-size: 36px;
       }
       .grid-container{
         height: 145vh;
@@ -151,10 +151,10 @@ export default class AboutPage extends Vue {
         grid-template-columns: 8fr 1fr;
       }
       .current-section{
-        height: 327vh;
+        height: 320vh;
       }
       .join{
-        top: 167vh;
+        top: 585vh;
       }
       h3{
         font-size: 35px;
@@ -166,7 +166,7 @@ export default class AboutPage extends Vue {
 
     @media only screen and (max-width: 930px) {
       .header-text{
-        font-size: 25px;
+        font-size: 31px;
       }
       .grid-container{
         height: 150vh;
@@ -174,10 +174,10 @@ export default class AboutPage extends Vue {
         grid-template-columns: 8fr 1fr;
       }
       .current-section{
-        height: 354vh;
+        height: 340vh;
       }
       .join{
-        top: 194vh;
+        top: 605vh;
       }
       h3{
         font-size: 30px;
@@ -189,7 +189,7 @@ export default class AboutPage extends Vue {
 
     @media only screen and (max-width: 830px) {
       .header-text{
-        font-size: 20px;
+        font-size: 21px;
       }
       .grid-container{
         height: 160vh;
@@ -200,7 +200,31 @@ export default class AboutPage extends Vue {
         height: 340vh;
       }
       .join{
-        top: 180vh;
+        top: 605vh;
+      }
+      h3{
+        font-size: 25px;
+      }
+      .p_width{
+        width: 70vw;
+      }
+    }
+
+
+    @media only screen and (max-width: 830px) and (max-height: 500px){
+      .header-text{
+        font-size: 21px;
+      }
+      .grid-container{
+        height: 190vh;
+        width: 75vw;
+        grid-template-columns: 8fr 1fr;
+      }
+      .current-section{
+        height: 370vh;
+      }
+      .join{
+        top: 635vh;
       }
       h3{
         font-size: 25px;
