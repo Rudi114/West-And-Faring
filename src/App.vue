@@ -76,7 +76,7 @@ export default class App extends Vue {
     display: block;
     overflow-y: scroll;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     display: flex;

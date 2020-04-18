@@ -1,7 +1,7 @@
 <template lang="pug">
   div(class="page")
-    v-img(src="../images/sticky_note/sn_exist1.png" class="sn_exist" :style="{left: this.existLeft}")
     v-img(src="../images/sticky_note/sn_note.png" class="sn_note" :style="{left: this.noteRight}")
+    v-img(src="../images/sticky_note/sn_exist1.png" class="sn_exist" :style="{left: this.existLeft}")
 </template>
 
 <script lang="ts">
@@ -40,7 +40,7 @@ export default class StickyNotePage extends Vue {
     position: relative;
     width: 65vw;
     height: auto;
-    z-index: 5;
+    z-index: 1;
     transition: all 0.7s;
     top: 50%;
     transform: translateY(-50%);
@@ -51,7 +51,6 @@ export default class StickyNotePage extends Vue {
     width: 25%;
     height: auto;
     top: 140vh;
-    z-index: 1;
     transition: all 0.7s;
   }
 </style>
