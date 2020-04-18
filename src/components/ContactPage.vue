@@ -39,7 +39,7 @@ export default class ContactPage extends Vue {
     font-size: 70px;
     height: auto;
     bottom: 77vh;
-    left: 22vw;
+    left: 14vw;
     color: white;
     font-family: hero-new, sans-serif;
     font-weight: 500;
@@ -49,11 +49,11 @@ export default class ContactPage extends Vue {
     position: relative;
     height: auto;
     bottom: 67vh;
-    left: 22vw;
+    left: 14vw;
     color: white;
     font-size: 30px;
     font-family: hero-new, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
   }
 </style>

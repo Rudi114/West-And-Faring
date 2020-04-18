@@ -45,7 +45,7 @@ export default class TitlePage extends Vue {
 
 
   .page{
-    background-color: #c94904;
+    background-color: #E75D46;
   }
   .burger{
     position: relative;
@@ -59,7 +59,6 @@ export default class TitlePage extends Vue {
   .logo{
 
     position: relative;
-    background-color: #c94904;
     background-size: 100vw;
     background-image: url('../images/title/tp_logo.png');
     background-attachment: fixed;
