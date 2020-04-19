@@ -221,7 +221,7 @@ export default class AboutPage extends Vue {
         grid-template-columns: 8fr 1fr;
       }
       .current-section{
-        height: 390vh;
+        height: 370vh;
       }
       .join{
         top: 635vh;
