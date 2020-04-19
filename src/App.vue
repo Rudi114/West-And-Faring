@@ -131,7 +131,7 @@ export default class App extends Vue {
 
     @media only screen and (max-width: 830px) and (max-height: 500px){
       .about{
-        height: 370vh;
+        height: 390vh;
       }
     }
 

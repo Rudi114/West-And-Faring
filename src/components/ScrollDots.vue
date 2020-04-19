@@ -61,8 +61,8 @@ export default class ScrollDots extends Vue {
       this.scrollHeight > 2.5 && this.scrollHeight <= 5.7 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
       this.scrollHeight > 5.7 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
     } else if (this.pageWidth <= 900 && this.pageHeight <= 500) {
-      this.scrollHeight > 2.5 && this.scrollHeight <= 6.2 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
-      this.scrollHeight > 6.2 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+      this.scrollHeight > 2.5 && this.scrollHeight <= 6.4 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 6.4 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
     } else if (this.pageWidth <= 930) {
       this.scrollHeight > 2.5 && this.scrollHeight <= 5.9 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
       this.scrollHeight > 5.9 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
