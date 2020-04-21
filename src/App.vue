@@ -8,7 +8,7 @@
       AboutPage(class="scroll-item about")
       ContactPage(class="scroll-item not-about")
       div( v-if="(pageWidth < 800) && (mobile === true)" class="rotate")
-        img( v-if="(pageWidth < 800) && (mobile === true)" src="./images/mobile/rotate.png" class="rotate-img")
+        img( v-if="(pageWidth < 800) && (mobile === true)" src="./images/mobile/rotate-03.png" class="rotate-img")
 </template>
 
 <script lang="ts">
@@ -86,7 +86,7 @@ export default class App extends Vue {
     display: block;
     overflow-y: scroll;
     overflow-x: hidden;
-    // -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     display: flex;
@@ -108,18 +108,18 @@ export default class App extends Vue {
     flex: 1;
   }
   .about{
-    height: 320vh;
+    height: 340vh;
   }
 
     @media only screen and (max-width: 1030px) {
       .about{
-        height: 320vh;
+        height: 360vh;
       }
     }
 
     @media only screen and (max-width: 930px) {
       .about{
-        height: 340vh;
+        height: 360vh;
       }
     }
 
@@ -131,7 +131,7 @@ export default class App extends Vue {
 
     @media only screen and (max-width: 900px) and (max-height: 500px){
       .about{
-        height: 370vh;
+        height: 390vh;
       }
     }
 

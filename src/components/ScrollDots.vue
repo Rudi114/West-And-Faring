@@ -57,13 +57,19 @@ export default class ScrollDots extends Vue {
     ((this.scrollHeight > 0.5) && (this.scrollHeight < 2.5)) ? this.opacityLogo = 1 : this.opacityLogo = 0;
     this.scrollHeight >= 2.5 ? this.opacityLogoWhite = 1 : this.opacityLogoWhite = 0;
 
-    if(this.pageWidth > 930) {
-      this.scrollHeight > 2.5 && this.scrollHeight <= 5.7 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
-      this.scrollHeight > 5.7 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
-    } else if (this.pageWidth <= 900 && this.pageHeight <= 500) {
-      this.scrollHeight > 2.5 && this.scrollHeight <= 6.4 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
-      this.scrollHeight > 6.4 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
-    } else if (this.pageWidth <= 930) {
+    if (this.pageWidth > 1030) {
+      this.scrollHeight > 2.5 && this.scrollHeight <= 5.9 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 5.9 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    } else if (this.pageWidth <= 1030 && this.pageWidth > 930) {
+      this.scrollHeight > 2.5 && this.scrollHeight <= 6.1 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 6.1 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    } else if (this.pageWidth <= 900 && this.pageHeight <= 500) { //mobile
+      this.scrollHeight > 2.5 && this.scrollHeight <= 6.2 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 6.2 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    } else if (this.pageWidth <= 930 && this.pageWidth > 830) {
+      this.scrollHeight > 2.5 && this.scrollHeight <= 6.1 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
+      this.scrollHeight > 6.1 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
+    } else if (this.pageWidth <= 830) {
       this.scrollHeight > 2.5 && this.scrollHeight <= 5.9 ? this.opacityDot3 = 1 : this.opacityDot3 = 0;
       this.scrollHeight > 5.9 ? this.opacityDot4 = 1 : this.opacityDot4 = 0;
     }

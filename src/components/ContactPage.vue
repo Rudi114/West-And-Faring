@@ -4,9 +4,11 @@
     h3(class="contact-title")
       | Contact
     p(class="contact-about")
-      | email: westandfaring1@gmail.com
+      a(href="mailto:westandfaring1@gmail.com" class="the-styling")
+        | westandfaring1@gmail.com
       br
-      | phone: (925)451-4213
+      a(href="tel:925-451-4213" class="the-styling")
+        | (925)451-4213
     //- img(src="../images/contact/cp_temp.png" class="cp_temp")
 </template>
 
@@ -36,14 +38,16 @@ export default class ContactPage extends Vue {
   }
   .contact-title{
     position: relative;
-    font-size: 70px;
+    font-size: 80px;
     height: auto;
     bottom: 77vh;
     left: 14vw;
     color: white;
     font-family: hero-new, sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
+    text-decoration: none;
+    outline: 0;
   }
   .contact-about{
     position: relative;
@@ -51,10 +55,16 @@ export default class ContactPage extends Vue {
     bottom: 67vh;
     left: 14vw;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     font-family: hero-new, sans-serif;
     font-weight: 300;
     font-style: normal;
+    border-bottom: none;
+  }
+
+  .the-styling{
+    text-decoration: none;
+    color: white;
   }
 
   @media only screen and (max-width: 830px) {
@@ -63,6 +73,18 @@ export default class ContactPage extends Vue {
     }
     .contact-about{
       font-size: 21px;
+    }
+  }
+
+   @media only screen and (max-width: 900px) and (max-height: 500px){
+    .contact-title{
+      font-size: 120px;
+      bottom: 87vh;
+    }
+    .contact-about{
+      font-size: 40px;
+      bottom: 77vh;
+      line-height: 60px;
     }
   }
 </style>

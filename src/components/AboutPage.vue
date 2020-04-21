@@ -54,7 +54,7 @@ export default class AboutPage extends Vue {
   .join{
     position: absolute;
     left: calc(50vw - 75px);
-    top: 585vh;
+    top: 605vh;
     width: 150px;
     padding: 0;
     margin: 0;
@@ -63,7 +63,7 @@ export default class AboutPage extends Vue {
 
   .current-section{
     background: #4C64FF;
-    height: 320vh;
+    height: 340vh;
   }
 
   .color{
@@ -130,11 +130,11 @@ export default class AboutPage extends Vue {
     position: relative;
     top: 115vh;
     left: 14vw;
-    height: 140vh;
+    height: 170vh;
     width: 55vw;
     display: grid;
     grid-template-columns: 11fr 2fr;
-    grid-template-rows: 100px 4fr 1fr 100px 4fr 1fr 100px 4fr 1fr 100px 4fr;
+    grid-template-rows: 100px 5fr 1fr 100px 6fr 1fr 100px 6fr 1fr 100px 4fr;
   }
 
   .p_width{
@@ -146,15 +146,16 @@ export default class AboutPage extends Vue {
         font-size: 36px;
       }
       .grid-container{
-        height: 145vh;
+        height: 180vh;
         width: 55vw;
         grid-template-columns: 8fr 1fr;
+        grid-template-rows: 80px 5fr 1fr 80px 6fr 1fr 80px 6fr 1fr 80px 4fr;
       }
       .current-section{
-        height: 320vh;
+        height: 360vh;
       }
       .join{
-        top: 585vh;
+        top: 630vh;
       }
       h3{
         font-size: 35px;
@@ -167,17 +168,19 @@ export default class AboutPage extends Vue {
     @media only screen and (max-width: 930px) {
       .header-text{
         font-size: 31px;
+        line-height: 47px;
       }
       .grid-container{
-        height: 150vh;
+        height: 190vh;
         width: 55vw;
         grid-template-columns: 8fr 1fr;
+        grid-template-rows: 70px 5fr 1fr 70px 6fr 1fr 70px 6fr 1fr 70px 4fr;
       }
       .current-section{
-        height: 340vh;
+        height: 360vh;
       }
       .join{
-        top: 605vh;
+        top: 625vh;
       }
       h3{
         font-size: 30px;
@@ -189,18 +192,20 @@ export default class AboutPage extends Vue {
 
     @media only screen and (max-width: 830px) {
       .header-text{
-        font-size: 21px;
+        font-size: 26px;
+        line-height: 38px;
       }
       .grid-container{
-        height: 160vh;
+        height: 180vh;
         width: 75vw;
         grid-template-columns: 8fr 1fr;
+        grid-template-rows: 70px 5fr 1fr 70px 6fr 1fr 70px 6fr 1fr 70px 4fr;
       }
       .current-section{
-        height: 340vh;
+        height: 360vh;
       }
       .join{
-        top: 605vh;
+        top: 615vh;
       }
       h3{
         font-size: 25px;
@@ -213,18 +218,20 @@ export default class AboutPage extends Vue {
 
     @media only screen and (max-width: 900px) and (max-height: 500px){
       .header-text{
-        font-size: 21px;
+        font-size: 35px;
+        line-height: 44px;
       }
       .grid-container{
-        height: 190vh;
+        height: 220vh;
         width: 75vw;
         grid-template-columns: 8fr 1fr;
+        grid-template-rows: 60px 5fr 1fr 60px 6fr 1fr 60px 6fr 1fr 60px 4fr;
       }
       .current-section{
-        height: 370vh;
+        height: 390vh;
       }
       .join{
-        top: 635vh;
+        top: 655vh;
       }
       h3{
         font-size: 25px;
@@ -272,7 +279,7 @@ export default class AboutPage extends Vue {
     font-family: hero-new, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .creative_p{
