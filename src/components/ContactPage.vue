@@ -9,14 +9,16 @@
       input(v-model="email" placeholder="email" class="contact-input" id="email" :style="{right: this.emailMove}" v-on:keyup.13="emailOnEnter")
       input(v-model="message" placeholder="message" class="contact-input" id="message" :style="{right: this.messageMove}" v-on:keyup.13="messageOnEnter")
       div(class="thanks-div" :style="{right: this.thanksMove}")
-        h2
+        h2(class=("thanks"))
           | Thanks for reaching out!
-        p
+        p(class="thanks-text")
           | You will hear from us soon.
 </template>
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator';
+
+import emailjs from 'emailjs-com';
 
 @Component({
   name: 'ContactPage',
@@ -25,7 +27,7 @@ import { Component, Vue, Watch } from 'vue-property-decorator';
 })
 
 export default class ContactPage extends Vue {
-  public nameMove: string = '-33vw';
+  public nameMove: string = '-33.2vw';
   public companyMove: string = '-150vw';
   private emailMove: string = '-150vw';
   private messageMove: string = '-150vw';
@@ -38,7 +40,7 @@ export default class ContactPage extends Vue {
 
   nameOnEnter() {
     this.nameMove = '100vw'
-    this.companyMove = '-33vw'
+    this.companyMove = '-33.2vw'
     if(document.getElementById('name') !== null) {
       this.name = document.getElementById('name').value
       console.log(this.name)
@@ -47,29 +49,31 @@ export default class ContactPage extends Vue {
 
   companyOnEnter() {
     this.companyMove = '100vw'
-    this.emailMove = '-33vw'
-    if(document.getElementById('comapny') !== null) {
-      this.name = document.getElementById('company').value
-      console.log(this.name)
-    }
+    this.emailMove = '-33.2vw'
   }
 
   emailOnEnter() {
     this.emailMove = '100vw'
-    this.messageMove = '-33vw'
-    if(document.getElementById('email') !== null) {
-      this.name = document.getElementById('email').value
-      console.log(this.name)
-    }
+    this.messageMove = '-33.2vw'
   }
 
   messageOnEnter() {
     this.messageMove = '100vw'
-    this.thanksMove = '-5vw'
-    if(document.getElementById('message') !== null) {
-      this.name = document.getElementById('message').value
-      console.log(this.name)
-    }
+    this.thanksMove = '-14.2vw'
+
+    var templateParams = {
+      name: this.name,
+      company: this.company,
+      email: this.email,
+      message: this.message
+    };
+ 
+    emailjs.send('default_service', 'template_XRt63hxT', templateParams, 'user_QovvQ4XnU3XT3d3Cw31Mw')
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
   }
   
 }
@@ -113,7 +117,7 @@ export default class ContactPage extends Vue {
     bottom: 10vh;
     opacity: 0.5;
     border-bottom: 1px solid white;
-    height: 120px;
+    height: 150px;
     width: 70vw;
     font-size: 120px;
     font-family: hero-new, sans-serif;
@@ -144,9 +148,25 @@ export default class ContactPage extends Vue {
 
   .thanks-div{
     position: absolute;
-    width: 40vw;
+    width: 50vw;
     bottom: 10vh;
     transition: all 0.7s;
+    font-family: hero-new, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .thanks{
+    font-family: hero-new, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;
+  }
+
+  .thanks-text{
+    font-family: hero-new, sans-serif;
+    font-weight: 300;
+    font-style: normal;
   }
 
 
@@ -154,12 +174,19 @@ export default class ContactPage extends Vue {
     .contact-title{
       font-size: 50px;
     }
+    .contact-input{
+      font-size: 80px;
+    }
   }
 
    @media only screen and (max-width: 900px) and (max-height: 500px){
     .contact-title{
-      font-size: 120px;
-      bottom: 87vh;
+      font-size: 50px;
+    }
+    .contact-input{
+      font-size: 80px;
+      bottom: 20vh;
+      height: 112px;
     }
   }
 </style>
