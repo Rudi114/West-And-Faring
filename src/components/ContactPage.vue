@@ -4,13 +4,19 @@
     h3(class="contact-title")
       | Contact
     div(class="contact-form")
-      input(v-model="name" placeholder="name" id="name" :style="{left: this.nameMove}" v-on:keyup.13='onEnter()')
-      input(v-model="email" placeholder="email" id="email" :style="{left: this.emailMove}")
-      textarea(v-model="message" placeholder="message" id="message" :style="{left: this.messageMove}")
+      input(v-model="name" placeholder="name" class="contact-input" id="name" :style="{right: this.nameMove}" v-on:keyup.13="nameOnEnter")
+      input(v-model="company" placeholder="company" class="contact-input" id="company" :style="{right: this.companyMove}" v-on:keyup.13="companyOnEnter")
+      input(v-model="email" placeholder="email" class="contact-input" id="email" :style="{right: this.emailMove}" v-on:keyup.13="emailOnEnter")
+      input(v-model="message" placeholder="message" class="contact-input" id="message" :style="{right: this.messageMove}" v-on:keyup.13="messageOnEnter")
+      div(class="thanks-div" :style="{right: this.thanksMove}")
+        h2
+          | Thanks for reaching out!
+        p
+          | You will hear from us soon.
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 
 @Component({
   name: 'ContactPage',
@@ -19,31 +25,53 @@ import { Component, Vue } from 'vue-property-decorator';
 })
 
 export default class ContactPage extends Vue {
-  public nameMove: string = '14vw';
-  private emailMove: string = '14vw';
-  private messageMove: string = '14vw';
+  public nameMove: string = '-33vw';
+  public companyMove: string = '-150vw';
+  private emailMove: string = '-150vw';
+  private messageMove: string = '-150vw';
+  private thanksMove: string = '-150vw';
   public name: string = '';
-  private email: string = ''
-  private message: string = ''
+  public company: string = '';
+  private email: string = '';
+  private message: string = '';
 
 
-  onEnter() {
-    var input = document.getElementById("name");
-    if(input !== null) {
-      input.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-          console.log('this far')
-          event.preventDefault();
-          var name = '28vw';
-          return name;
-        }
-      });
-      this.nameMove = name
-      console.log(name)
+  nameOnEnter() {
+    this.nameMove = '100vw'
+    this.companyMove = '-33vw'
+    if(document.getElementById('name') !== null) {
+      this.name = document.getElementById('name').value
+      console.log(this.name)
     }
   }
 
+  companyOnEnter() {
+    this.companyMove = '100vw'
+    this.emailMove = '-33vw'
+    if(document.getElementById('comapny') !== null) {
+      this.name = document.getElementById('company').value
+      console.log(this.name)
+    }
+  }
 
+  emailOnEnter() {
+    this.emailMove = '100vw'
+    this.messageMove = '-33vw'
+    if(document.getElementById('email') !== null) {
+      this.name = document.getElementById('email').value
+      console.log(this.name)
+    }
+  }
+
+  messageOnEnter() {
+    this.messageMove = '100vw'
+    this.thanksMove = '-5vw'
+    if(document.getElementById('message') !== null) {
+      this.name = document.getElementById('message').value
+      console.log(this.name)
+    }
+  }
+  
 }
 </script>
 
@@ -60,9 +88,9 @@ export default class ContactPage extends Vue {
   }
   .contact-title{
     position: relative;
-    font-size: 80px;
+    font-size: 60px;
     height: auto;
-    bottom: 77vh;
+    bottom: 90vh;
     left: 14vw;
     color: white;
     font-family: hero-new, sans-serif;
@@ -80,44 +108,25 @@ export default class ContactPage extends Vue {
     z-index: 43;
     color: white;
   }
-  #name{
-    position: relative;
-    left: 14vw;
-    background-color: grey;
+  .contact-input{
+    position: absolute;
+    bottom: 10vh;
     opacity: 0.5;
-    border-radius: 10px;
-    height: 30px;
-    width: 300px;
-    font-size: 30px;
-  }
-
-  #email{
-    position: relative;
-    left: 14vw;
-    background-color: grey;
-    opacity: 0.5;
-    border-radius: 10px;
-    height: 30px;
-    width: 300px;
-    font-size: 30px;
-  }
-
-  #message{
-    position: relative;
-    top: 5vh;
-    left: 14vw;
-    background-color: grey;
-    opacity: 0.5;
-    border-radius: 10px;
-    height: 200px;
-    width: 300px;
-    font-size: 30px;
+    border-bottom: 1px solid white;
+    height: 120px;
+    width: 70vw;
+    font-size: 120px;
+    font-family: hero-new, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    transition: all 0.7s;
   }
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
     align-self: start;
+    // font-size: 60px;
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -128,6 +137,16 @@ export default class ContactPage extends Vue {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: white;
     align-self: start;
+  }
+  input, select { 
+    outline: none;
+  }
+
+  .thanks-div{
+    position: absolute;
+    width: 40vw;
+    bottom: 10vh;
+    transition: all 0.7s;
   }
 
 
