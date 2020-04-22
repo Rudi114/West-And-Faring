@@ -83,29 +83,20 @@ export default class App extends Vue {
 
 <style lang="scss">
     .scroll-snap-container {
-    display: block;
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
     position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    min-width: 100%;
-    min-height: 100%;
   }
   .scroll-item {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    flex: 1;
   }
   .about{
     height: 340vh;

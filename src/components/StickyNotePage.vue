@@ -1,7 +1,7 @@
 <template lang="pug">
   div(class="page")
-    v-img(src="../images/sticky_note/sn_note.png" class="sn_note" :style="{left: this.noteRight}")
-    v-img(src="../images/sticky_note/sn_exist1.png" class="sn_exist" :style="{left: this.existLeft}")
+    img(src="../images/sticky_note/sn_note.png" class="sn_note" :style="{left: this.noteRight}")
+    img(src="../images/sticky_note/sn_exist1.png" class="sn_exist" :style="{left: this.existLeft}")
 </template>
 
 <script lang="ts">
