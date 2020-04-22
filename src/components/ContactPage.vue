@@ -98,11 +98,8 @@ export default class ContactPage extends Vue {
     left: 14vw;
     color: white;
     font-family: hero-new, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
-    outline: 0;
-    opacity: 0.59;
-    letter-spacing: -10px;
   }
 
   .contact-form{
