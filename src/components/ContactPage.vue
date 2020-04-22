@@ -41,10 +41,6 @@ export default class ContactPage extends Vue {
   nameOnEnter() {
     this.nameMove = '100vw'
     this.companyMove = '-33.2vw'
-    if(document.getElementById('name') !== null) {
-      this.name = document.getElementById('name').value
-      console.log(this.name)
-    }
   }
 
   companyOnEnter() {
