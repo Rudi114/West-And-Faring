@@ -1,4 +1,4 @@
-# my-vue
+# West&Faring
 
 ## Project setup
 ```
