@@ -26,6 +26,8 @@ export default class ContactPage extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  @import url("https://use.typekit.net/zce0izl.css"); 
+
   div{
     background: #262B30;
     height: 100vh;
@@ -38,21 +40,22 @@ export default class ContactPage extends Vue {
   }
   .contact-title{
     position: relative;
-    font-size: 80px;
+    font-size: 150px;
     height: auto;
-    bottom: 77vh;
-    left: 14vw;
+    bottom: 90vh;
+    left: 13.4vw;
     color: white;
     font-family: hero-new, sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
-    text-decoration: none;
     outline: 0;
+    opacity: 0.59;
+    letter-spacing: -10px;
   }
   .contact-about{
     position: relative;
     height: auto;
-    bottom: 67vh;
+    bottom: 77vh;
     left: 14vw;
     color: white;
     font-size: 40px;
