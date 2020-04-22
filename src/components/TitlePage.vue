@@ -1,6 +1,6 @@
 <template lang="pug">
   div(class="page")
-    div(class="logo")
+    img(src="../images/title/logo_1.png" class="logo")
     img(src="../images/title/tp_burger.png" class="burger" :style="{opacity: this.opacity}")
 </template>
 
@@ -49,20 +49,18 @@ export default class TitlePage extends Vue {
     overflow: hidden;
   }
   .burger{
-    position: relative;
+    position: absolute;
     width: 1cm;
     height: 0.4cm;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    left: calc(50vw - 0.5cm);
     bottom: 10vh;
   }
-  .logo{
 
-    position: relative;
-    background-size: 100vw;
-    background-image: url('../images/title/tp_logo.png');
-    background-attachment: fixed;
-    height: 100vh;
+  .logo{
+    position: absolute;
+    top: 4vh;
+    left: 10vw;
+    width: 80vw;
+    height: auto;
   }
 </style>
