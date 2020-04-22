@@ -25,25 +25,6 @@ export default class TitlePage extends Vue {
 </script>
 
 <style lang="scss" scoped>
-  // div{
-  //   background-color: #f75b43;
-  //   background-image: url('../images/title/tp_title.png');
-  //   background-size: 100vw;
-  //   background-attachment: fixed;
-  //   height: 100vh;
-  // }
-  // .tp_burger{
-  //   position: relative;
-  //   width: 1cm;
-  //   height: 0.4cm;
-  //   display: block;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   top: 90vh;
-  // }
-
-
-
   .page{
     background-color: #E75D46;
     overflow: hidden;
@@ -58,9 +39,10 @@ export default class TitlePage extends Vue {
 
   .logo{
     position: absolute;
-    top: 4vh;
-    left: 10vw;
-    width: 80vw;
+    left: 15vw;
+    width: 70vw;
     height: auto;
+    top: 44%;
+    transform: translateY(-50%);
   }
 </style>
