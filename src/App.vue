@@ -85,6 +85,7 @@ export default class App extends Vue {
     .scroll-snap-container {
     overflow-y: scroll;
     overflow-x: hidden;
+    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -94,6 +95,11 @@ export default class App extends Vue {
     left: 0px;
     right: 0px;
   }
+
+  .scroll-snap-container::-webkit-scrollbar {
+    display: none;
+  }
+
   .scroll-item {
     scroll-snap-align: start;
     scroll-snap-stop: always;
