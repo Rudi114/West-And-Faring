@@ -39,8 +39,8 @@ export default class TitlePage extends Vue {
 
   .logo{
     position: absolute;
-    left: 15vw;
-    width: 70vw;
+    left: 22.5vw;
+    width: 55vw;
     height: auto;
     top: 44%;
     transform: translateY(-50%);
